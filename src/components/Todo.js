@@ -4,11 +4,11 @@ import { TodoDiv, Button, TodoTitle } from "../style";
 const Todo = ({ index, text, completed, removeTodo, checkTodo }) => {
   return (
     <TodoDiv>
-      <TodoTitle style={{ textDecoration: completed ? "line-through" : "" }}>
-        {text}
-      </TodoTitle>
+      <TodoTitle completed={completed}>{text}</TodoTitle>
+      <Button onClick={() => checkTodo(index)}>
+        <i className="fas fa-check" />
+      </Button>
       <Button onClick={() => removeTodo(index)}>X</Button>
-      <Button onClick={() => checkTodo(index)}>&middot;</Button>
     </TodoDiv>
   );
 };

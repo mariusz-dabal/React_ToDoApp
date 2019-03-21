@@ -29,7 +29,7 @@ const Heading = styled.h1`
 const Input = styled.input`
   width: 60%;
   display: block;
-  margin: 0 auto;
+  margin: 1em auto;
   border: none;
   border-bottom: 1px dotted #000;
   background: #faf2ad;
@@ -56,9 +56,9 @@ const TodoTitle = styled.span`
   margin-right: auto;
 
   ${props =>
-    props.complete &&
+    props.completed &&
     css`
-      color: red;
+      text-decoration: line-through;
     `}
 `;
 
@@ -69,6 +69,7 @@ const Button = styled.button`
   font-family: "Just Another Hand", cursive;
   font-size: 0.9em;
   padding: 0 8px 0;
+  cursor: pointer;
 `;
 
 export { AppWrapper, Heading, Input, TodosDiv, TodoDiv, TodoTitle, Button };
