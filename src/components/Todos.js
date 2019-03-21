@@ -1,9 +1,10 @@
 import React from "react";
 import Todo from "./Todo";
+import { TodosDiv } from "../style";
 
 const Todos = ({ todos, removeTodo, checkTodo }) => {
   return (
-    <div>
+    <TodosDiv>
       {todos.map((todo, index) => (
         <Todo
           key={index}
@@ -14,7 +15,7 @@ const Todos = ({ todos, removeTodo, checkTodo }) => {
           completed={todo.completed}
         />
       ))}
-    </div>
+    </TodosDiv>
   );
 };
 

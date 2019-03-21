@@ -1,14 +1,15 @@
 import React from "react";
+import { TodoDiv, Button, TodoTitle } from "../style";
 
 const Todo = ({ index, text, completed, removeTodo, checkTodo }) => {
   return (
-    <div>
-      <span style={{ textDecoration: completed ? "line-through" : "" }}>
+    <TodoDiv>
+      <TodoTitle style={{ textDecoration: completed ? "line-through" : "" }}>
         {text}
-      </span>
-      <button onClick={() => removeTodo(index)}>X</button>
-      <button onClick={() => checkTodo(index)}>&middot;</button>
-    </div>
+      </TodoTitle>
+      <Button onClick={() => removeTodo(index)}>X</Button>
+      <Button onClick={() => checkTodo(index)}>&middot;</Button>
+    </TodoDiv>
   );
 };
 

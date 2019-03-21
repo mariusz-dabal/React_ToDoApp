@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Todos from "./components/Todos";
 import TodoInput from "./components/TodoInput";
-import "./App.css";
+import GlobalStyle from "./globalStyle";
+import { AppWrapper, Heading } from "./style";
 
 function App() {
   const [todos, setTodos] = useState([
@@ -43,12 +44,15 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>To do List</h1>
-      <p>Let's plan for today!</p>
-      <Todos todos={todos} removeTodo={removeTodo} checkTodo={checkTodo} />
-      <TodoInput addTodo={addTodo} />
-    </div>
+    <React.Fragment>
+      <GlobalStyle />
+      <AppWrapper>
+        <Heading>To do List</Heading>
+        <p>Let's plan for today!</p>
+        <TodoInput addTodo={addTodo} />
+        <Todos todos={todos} removeTodo={removeTodo} checkTodo={checkTodo} />
+      </AppWrapper>
+    </React.Fragment>
   );
 }
 

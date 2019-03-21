@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Input } from "../style";
 
 const TodoInput = ({ addTodo }) => {
   const [text, setText] = useState("");
@@ -16,10 +17,11 @@ const TodoInput = ({ addTodo }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
+      <Input
         type="text"
         value={text}
         onChange={({ target }) => handleChange(target.value)}
+        placeholder="ex: do homework"
       />
     </form>
   );
