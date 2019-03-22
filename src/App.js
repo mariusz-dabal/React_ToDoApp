@@ -47,10 +47,15 @@ function App() {
     <React.Fragment>
       <GlobalStyle />
       <AppWrapper>
-        <Heading>To do List</Heading>
+        <Heading>To do list</Heading>
         <p>Let's plan for today!</p>
         <TodoInput addTodo={addTodo} />
-        <Todos todos={todos} removeTodo={removeTodo} checkTodo={checkTodo} />
+        <Todos
+          todos={todos}
+          removeTodo={removeTodo}
+          checkTodo={checkTodo}
+          editTodo={editTodo}
+        />
       </AppWrapper>
     </React.Fragment>
   );

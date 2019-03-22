@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input } from "../style";
+import { Form, Input, SubmitButton } from "../style";
 
 const TodoInput = ({ addTodo }) => {
   const [text, setText] = useState("");
@@ -16,14 +16,15 @@ const TodoInput = ({ addTodo }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <Input
         type="text"
         value={text}
         onChange={({ target }) => handleChange(target.value)}
         placeholder="ex: do homework"
       />
-    </form>
+      <SubmitButton onClick={handleSubmit}>add</SubmitButton>
+    </Form>
   );
 };
 

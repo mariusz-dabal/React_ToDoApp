@@ -18,6 +18,10 @@ const GlobalStyle = createGlobalStyle`
         font-size: 2em;
         text-align: center;
     }
+
+    label {
+        cursor: pointer;
+    }
 `;
 
 export default GlobalStyle;
